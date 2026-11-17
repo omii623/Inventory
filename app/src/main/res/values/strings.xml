@@ -1,3 +1,248 @@
 <resources>
-    <string name="app_name">Inventory</string>
+    <string name="app_name" translatable="false">Inventory</string>
+
+    <!-- Általános -->
+    <string name="back">Back</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="delete">Delete</string>
+    <string name="more_options">More options</string>
+
+    <plurals name="item_count">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+    <plurals name="category_count">
+        <item quantity="one">%d category</item>
+        <item quantity="other">%d categories</item>
+    </plurals>
+
+    <!-- Alsó navigáció -->
+    <string name="nav_categories">Categories</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Kezdőlap -->
+    <string name="home_title">Inventory</string>
+    <string name="home_empty_title">No categories yet</string>
+    <string name="home_empty_text">Create a category (e.g. Laptop or Jewelry) with its own fields, then add your items to it.</string>
+    <string name="home_empty_button">Create category</string>
+    <string name="home_total_value">Total inventory value</string>
+    <string name="home_counts">%1$s • %2$s</string>
+    <string name="home_categories">Categories</string>
+    <string name="home_new_category">New category</string>
+    <string name="home_create_category_title">Create a new category</string>
+    <string name="home_create_category_text">With its own fields, e.g. Phone, Watch…</string>
+    <string name="home_recent">Recently added</string>
+
+    <!-- Státuszok -->
+    <string name="status_in_stock">In stock</string>
+    <string name="status_reserved">Reserved</string>
+    <string name="status_sold">Sold</string>
+    <string name="subcategory_other">Other</string>
+
+    <!-- Kategória szerkesztése -->
+    <string name="cat_new_title">New category</string>
+    <string name="cat_edit_title">Edit category</string>
+    <string name="cat_name">Category name</string>
+    <string name="cat_name_error">Enter a name</string>
+    <string name="cat_color">Color</string>
+    <string name="cat_icon">Icon</string>
+    <string name="cat_icon_mode_icon">Icon</string>
+    <string name="cat_icon_mode_letter">Letter</string>
+    <string name="cat_icon_letter_label">Letter or emoji</string>
+    <string name="cat_icon_letter_hint">Up to 2 characters, e.g. L, LP or 💻</string>
+    <string name="cat_tracking">Tracking</string>
+    <string name="tracking_unique">Unique items</string>
+    <string name="tracking_quantity">With quantity</string>
+    <string name="tracking_unique_hint">Every item is a single piece with its own details (e.g. laptops).</string>
+    <string name="tracking_quantity_hint">Items have a quantity and the value is per piece (e.g. 5 identical rings).</string>
+    <string name="cat_subcategories">Subcategories</string>
+    <string name="cat_subcategories_empty">No subcategories yet. Items without one are listed as “Other”.</string>
+    <string name="cat_subcategory_add">New</string>
+    <string name="subcategory_new_title">New subcategory</string>
+    <string name="subcategory_rename_title">Rename subcategory</string>
+    <string name="subcategory_name">Name</string>
+    <string name="cat_fields">Fields</string>
+    <string name="cat_fields_fixed">Fixed</string>
+    <string name="field_name">Name</string>
+    <string name="field_value">Value</string>
+    <string name="field_subcategory">Subcategory</string>
+    <string name="field_photo">Photo</string>
+    <string name="field_status">Status</string>
+    <string name="field_quantity">Quantity</string>
+    <string name="field_type_text">Text</string>
+    <string name="field_type_number_huf">Number • 0 Ft</string>
+    <string name="field_type_list">List</string>
+    <string name="field_type_photo">Up to 10 photos</string>
+    <string name="field_type_status">In stock / Reserved / Sold</string>
+    <string name="field_type_quantity">Number • pcs</string>
+    <string name="cat_archive">Archive</string>
+    <string name="cat_delete">Delete category</string>
+    <string name="cat_archive_title">Archive category?</string>
+    <string name="cat_archive_text">“%1$s” will be hidden from the home screen and search, and won’t count in the inventory value. You can restore it in Settings → Archived categories.</string>
+    <string name="cat_delete_title">Delete category?</string>
+    <string name="cat_delete_text_empty">“%1$s” will be permanently deleted. This can’t be undone.</string>
+    <plurals name="cat_delete_text">
+        <item quantity="one">“%1$s” and its %2$d item (with photos) will be permanently deleted. This can’t be undone.</item>
+        <item quantity="other">“%1$s” and its %2$d items (with photos) will be permanently deleted. This can’t be undone.</item>
+    </plurals>
+    <string name="cat_mode_warning_title">Switch to unique items?</string>
+    <plurals name="cat_mode_warning_text">
+        <item quantity="one">%d item has a quantity above 1. As a unique item it will count as 1 piece. The quantity is kept and comes back if you switch back.</item>
+        <item quantity="other">%d items have a quantity above 1. As unique items they will count as 1 piece. The quantities are kept and come back if you switch back.</item>
+    </plurals>
+    <string name="cat_mode_warning_confirm">Switch</string>
+
+    <!-- Saját mezők -->
+    <string name="field_add">Add field</string>
+    <string name="field_done">Done</string>
+    <string name="field_new_title">New field</string>
+    <string name="field_edit_title">Edit field</string>
+    <string name="field_name_label">Field name</string>
+    <string name="field_name_hint">e.g. Battery health</string>
+    <string name="field_name_error_empty">Enter a name</string>
+    <string name="field_name_error_duplicate">A field with this name already exists</string>
+    <string name="field_type">Type</string>
+    <string name="field_type_locked">The type can’t be changed once the field is saved, because existing values belong to it.</string>
+    <string name="field_photo_note">Photo is a fixed field, so it can’t be added again.</string>
+    <string name="field_unit">Unit</string>
+    <string name="field_unit_hint">e.g. GB, g, %</string>
+    <string name="field_options">Options</string>
+    <string name="field_option_new">New option</string>
+    <string name="field_option_add">Add option</string>
+    <string name="field_options_error">Add at least one option</string>
+    <string name="field_required">Required</string>
+    <string name="field_required_hint">Items can’t be saved without it.</string>
+    <string name="field_delete">Delete field</string>
+    <string name="field_delete_note">Deleting only hides the field: values already entered for items are kept.</string>
+    <string name="field_reorder">Drag to reorder</string>
+    <string name="field_drag_hint">Drag the handle to reorder. Changes are saved with Save.</string>
+    <string name="field_type_name_text">Text</string>
+    <string name="field_type_name_long_text">Long text</string>
+    <string name="field_type_name_number">Number</string>
+    <string name="field_type_name_select">List</string>
+    <string name="field_type_name_boolean">Yes/No</string>
+    <string name="field_type_name_date">Date</string>
+    <string name="field_type_name_link">Link</string>
+    <plurals name="field_option_count">
+        <item quantity="one">%d option</item>
+        <item quantity="other">%d options</item>
+    </plurals>
+
+    <!-- Tételek -->
+    <string name="item_new">New item</string>
+    <string name="items_empty_title">No items yet</string>
+    <string name="items_empty_text">Tap + to add the first item to this category.</string>
+    <string name="item_new_title">New item</string>
+    <string name="item_edit_title">Edit item</string>
+    <string name="item_section_basic">Basic details</string>
+    <string name="item_section_fields">%1$s fields</string>
+    <string name="item_unit_value">Unit value</string>
+    <string name="unit_pcs">pcs</string>
+    <string name="item_save">Save item</string>
+    <string name="item_properties">Properties</string>
+    <string name="item_unit_price_line">Unit price: %1$s</string>
+    <string name="item_quantity_decrease">Decrease quantity</string>
+    <string name="item_quantity_increase">Increase quantity</string>
+    <string name="item_open_link">Open link</string>
+    <string name="item_delete">Delete item</string>
+    <string name="item_delete_title">Delete item?</string>
+    <string name="item_delete_text">“%1$s” will be permanently deleted. This can’t be undone.</string>
+    <string name="item_zero_title">Quantity is 0</string>
+    <string name="item_zero_text">Mark the item as Sold? Sold items don’t count in the inventory value.</string>
+    <string name="item_zero_mark_sold">Mark as sold</string>
+    <string name="item_zero_keep">Keep in stock</string>
+    <plurals name="pieces">
+        <item quantity="one">%d pc</item>
+        <item quantity="other">%d pcs</item>
+    </plurals>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="form_none">Not set</string>
+    <string name="form_clear">Clear</string>
+    <string name="form_error_required">Required</string>
+    <string name="form_error_number">Enter a valid number</string>
+    <string name="form_error_link">Enter a valid web address</string>
+    <string name="form_error_quantity_new">Must be at least 1</string>
+    <string name="form_error_quantity">Enter a whole number</string>
+
+    <!-- Fotók -->
+    <string name="photos_section">Photos</string>
+    <string name="photo_add">Add photo</string>
+    <string name="photo_take">Take photo</string>
+    <string name="photo_pick">Choose from gallery</string>
+    <string name="photo_count">Photos: %1$d / %2$d • tap a photo for options</string>
+    <string name="photo_limit_reached">Photos: %1$d / %1$d – the limit is reached</string>
+    <string name="photo_import_failed">A photo couldn’t be added. Try another one.</string>
+    <string name="photo_cover">Cover</string>
+    <string name="photo_make_cover">Make cover</string>
+    <string name="photo_move_left">Move left</string>
+    <string name="photo_move_right">Move right</string>
+    <string name="photo_remove">Remove</string>
+    <string name="close">Close</string>
+
+    <!-- Keresés és szűrők -->
+    <string name="items_search_hint">Search in %1$s</string>
+    <string name="items_no_match_title">No matching items</string>
+    <string name="items_no_match_text">Try another search term or change the filters.</string>
+    <string name="filter_title">Filters</string>
+    <string name="filter_all">All</string>
+    <string name="filter_any">Any</string>
+    <string name="filter_from">From</string>
+    <string name="filter_to">To</string>
+    <string name="filter_contains">Contains</string>
+    <string name="filter_clear">Clear filters</string>
+    <string name="filter_clear_all">Clear search and filters</string>
+    <string name="filter_remove">Remove filter</string>
+    <string name="filter_show">Show</string>
+    <string name="filter_show_count">Show (%1$s)</string>
+    <string name="search_start_title">Search your inventory</string>
+    <string name="search_no_results_title">No results</string>
+    <string name="search_no_results_text">Nothing matches in the active categories. Archived categories aren’t searched.</string>
+    <plurals name="search_result_count">
+        <item quantity="one">%d result</item>
+        <item quantity="other">%d results</item>
+    </plurals>
+
+    <!-- Státusz panel -->
+    <string name="status_sheet_title">Change status</string>
+    <string name="status_in_stock_desc">Available, can be sold</string>
+    <string name="status_reserved_desc">Someone said they’ll buy it</string>
+    <string name="status_sold_desc">No longer counts in the inventory value</string>
+
+    <!-- Mentetlen változások -->
+    <string name="discard_title">Discard changes?</string>
+    <string name="discard_text">You have unsaved changes. If you leave now, they will be lost.</string>
+    <string name="discard_confirm">Discard</string>
+    <string name="discard_keep">Keep editing</string>
+
+    <!-- Keresés -->
+    <string name="search_title">Search</string>
+    <string name="search_placeholder">Search all items…</string>
+    <string name="search_empty_text">Search by name or by any text field of your items.</string>
+
+    <!-- Beállítások -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_theme">Theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="settings_language">Language</string>
+    <string name="language_system">System</string>
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_hungarian" translatable="false">Magyar</string>
+    <string name="settings_data">Data</string>
+    <string name="settings_archived">Archived categories</string>
+    <string name="settings_about">About</string>
+    <string name="settings_version">Version %1$s</string>
+
+    <!-- Archivált kategóriák -->
+    <string name="archived_title">Archived categories</string>
+    <string name="archived_empty_title">No archived categories</string>
+    <string name="archived_empty_text">Archived categories are hidden from the home screen and don’t count in the inventory value.</string>
+    <string name="archived_restore">Restore</string>
+    <string name="archived_delete">Delete permanently</string>
 </resources>

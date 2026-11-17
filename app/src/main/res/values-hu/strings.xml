@@ -1,0 +1,244 @@
+<resources>
+    <!-- Általános -->
+    <string name="back">Vissza</string>
+    <string name="save">Mentés</string>
+    <string name="cancel">Mégse</string>
+    <string name="ok">OK</string>
+    <string name="delete">Törlés</string>
+    <string name="more_options">További lehetőségek</string>
+
+    <plurals name="item_count">
+        <item quantity="one">%d tétel</item>
+        <item quantity="other">%d tétel</item>
+    </plurals>
+    <plurals name="category_count">
+        <item quantity="one">%d kategória</item>
+        <item quantity="other">%d kategória</item>
+    </plurals>
+
+    <!-- Alsó navigáció -->
+    <string name="nav_categories">Kategóriák</string>
+    <string name="nav_search">Keresés</string>
+    <string name="nav_settings">Beállítások</string>
+
+    <!-- Kezdőlap -->
+    <string name="home_title">Inventory</string>
+    <string name="home_empty_title">Még nincs kategória</string>
+    <string name="home_empty_text">Hozz létre egy kategóriát (pl. Laptop vagy Ékszer) saját mezőkkel, majd vedd fel bele a tételeidet.</string>
+    <string name="home_empty_button">Kategória létrehozása</string>
+    <string name="home_total_value">Teljes készletérték</string>
+    <string name="home_counts">%1$s • %2$s</string>
+    <string name="home_categories">Kategóriák</string>
+    <string name="home_new_category">Új kategória</string>
+    <string name="home_create_category_title">Új kategória létrehozása</string>
+    <string name="home_create_category_text">Saját mezőkkel, pl. Telefon, Óra…</string>
+    <string name="home_recent">Legutóbb hozzáadva</string>
+
+    <!-- Státuszok -->
+    <string name="status_in_stock">Készleten</string>
+    <string name="status_reserved">Lefoglalva</string>
+    <string name="status_sold">Eladva</string>
+    <string name="subcategory_other">Egyéb</string>
+
+    <!-- Kategória szerkesztése -->
+    <string name="cat_new_title">Új kategória</string>
+    <string name="cat_edit_title">Kategória szerkesztése</string>
+    <string name="cat_name">Kategória neve</string>
+    <string name="cat_name_error">Add meg a nevét</string>
+    <string name="cat_color">Szín</string>
+    <string name="cat_icon">Ikon</string>
+    <string name="cat_icon_mode_icon">Ikon</string>
+    <string name="cat_icon_mode_letter">Betű</string>
+    <string name="cat_icon_letter_label">Betű vagy emoji</string>
+    <string name="cat_icon_letter_hint">Legfeljebb 2 karakter, pl. L, LP vagy 💻</string>
+    <string name="cat_tracking">Nyilvántartás</string>
+    <string name="tracking_unique">Egyedi darab</string>
+    <string name="tracking_quantity">Mennyiséggel</string>
+    <string name="tracking_unique_hint">Minden tétel egyetlen darab, saját adatokkal (pl. laptopok).</string>
+    <string name="tracking_quantity_hint">A tételeknek mennyisége van, az érték 1 darabra vonatkozik (pl. 5 egyforma gyűrű).</string>
+    <string name="cat_subcategories">Alkategóriák</string>
+    <string name="cat_subcategories_empty">Még nincs alkategória. Az alkategória nélküli tételek „Egyéb”-ként jelennek meg.</string>
+    <string name="cat_subcategory_add">Új</string>
+    <string name="subcategory_new_title">Új alkategória</string>
+    <string name="subcategory_rename_title">Alkategória átnevezése</string>
+    <string name="subcategory_name">Név</string>
+    <string name="cat_fields">Mezők</string>
+    <string name="cat_fields_fixed">Fix</string>
+    <string name="field_name">Név</string>
+    <string name="field_value">Érték</string>
+    <string name="field_subcategory">Alkategória</string>
+    <string name="field_photo">Fénykép</string>
+    <string name="field_status">Státusz</string>
+    <string name="field_quantity">Mennyiség</string>
+    <string name="field_type_text">Szöveg</string>
+    <string name="field_type_number_huf">Szám • 0 Ft</string>
+    <string name="field_type_list">Lista</string>
+    <string name="field_type_photo">Legfeljebb 10 fotó</string>
+    <string name="field_type_status">Készleten / Lefoglalva / Eladva</string>
+    <string name="field_type_quantity">Szám • db</string>
+    <string name="cat_archive">Archiválás</string>
+    <string name="cat_delete">Kategória törlése</string>
+    <string name="cat_archive_title">Archiválod a kategóriát?</string>
+    <string name="cat_archive_text">A(z) „%1$s” eltűnik a kezdőlapról és a keresésből, és nem számít bele a készletértékbe. A Beállítások → Archivált kategóriák alatt visszaállítható.</string>
+    <string name="cat_delete_title">Törlöd a kategóriát?</string>
+    <string name="cat_delete_text_empty">A(z) „%1$s” véglegesen törlődik. Ez nem vonható vissza.</string>
+    <plurals name="cat_delete_text">
+        <item quantity="one">A(z) „%1$s” és a benne lévő %2$d tétel (a fotókkal együtt) véglegesen törlődik. Ez nem vonható vissza.</item>
+        <item quantity="other">A(z) „%1$s” és a benne lévő %2$d tétel (a fotókkal együtt) véglegesen törlődik. Ez nem vonható vissza.</item>
+    </plurals>
+    <string name="cat_mode_warning_title">Átváltasz egyedi darabra?</string>
+    <plurals name="cat_mode_warning_text">
+        <item quantity="one">%d tétel mennyisége több mint 1. Egyedi darabként 1 darabnak számít. A mennyiség megmarad, és visszaváltáskor visszajön.</item>
+        <item quantity="other">%d tétel mennyisége több mint 1. Egyedi darabként 1 darabnak számítanak. A mennyiségek megmaradnak, és visszaváltáskor visszajönnek.</item>
+    </plurals>
+    <string name="cat_mode_warning_confirm">Átváltás</string>
+
+    <!-- Saját mezők -->
+    <string name="field_add">Mező hozzáadása</string>
+    <string name="field_done">Kész</string>
+    <string name="field_new_title">Új mező</string>
+    <string name="field_edit_title">Mező szerkesztése</string>
+    <string name="field_name_label">Mező neve</string>
+    <string name="field_name_hint">pl. Akku állapota</string>
+    <string name="field_name_error_empty">Add meg a nevét</string>
+    <string name="field_name_error_duplicate">Már van ilyen nevű mező</string>
+    <string name="field_type">Típus</string>
+    <string name="field_type_locked">Mentés után a típus nem változtatható, mert a meglévő értékek ehhez tartoznak.</string>
+    <string name="field_photo_note">A Fénykép fix mező, ezért nem adható hozzá újra.</string>
+    <string name="field_unit">Mértékegység</string>
+    <string name="field_unit_hint">pl. GB, g, %</string>
+    <string name="field_options">Opciók</string>
+    <string name="field_option_new">Új opció</string>
+    <string name="field_option_add">Opció hozzáadása</string>
+    <string name="field_options_error">Adj meg legalább egy opciót</string>
+    <string name="field_required">Kötelező</string>
+    <string name="field_required_hint">Nélküle a tétel nem menthető.</string>
+    <string name="field_delete">Mező törlése</string>
+    <string name="field_delete_note">A törlés csak elrejti a mezőt: a tételeknél már megadott értékek megmaradnak.</string>
+    <string name="field_reorder">Húzd az átrendezéshez</string>
+    <string name="field_drag_hint">A fogantyút húzva átrendezheted. A változások a Mentéssel kerülnek be.</string>
+    <string name="field_type_name_text">Szöveg</string>
+    <string name="field_type_name_long_text">Hosszú szöveg</string>
+    <string name="field_type_name_number">Szám</string>
+    <string name="field_type_name_select">Lista</string>
+    <string name="field_type_name_boolean">Igen/Nem</string>
+    <string name="field_type_name_date">Dátum</string>
+    <string name="field_type_name_link">Link</string>
+    <plurals name="field_option_count">
+        <item quantity="one">%d opció</item>
+        <item quantity="other">%d opció</item>
+    </plurals>
+
+    <!-- Tételek -->
+    <string name="item_new">Új tétel</string>
+    <string name="items_empty_title">Még nincs tétel</string>
+    <string name="items_empty_text">Koppints a + gombra, és vedd fel az első tételt ebbe a kategóriába.</string>
+    <string name="item_new_title">Új tétel</string>
+    <string name="item_edit_title">Tétel szerkesztése</string>
+    <string name="item_section_basic">Alapadatok</string>
+    <string name="item_section_fields">%1$s mezői</string>
+    <string name="item_unit_value">Egységár</string>
+    <string name="unit_pcs">db</string>
+    <string name="item_save">Tétel mentése</string>
+    <string name="item_properties">Tulajdonságok</string>
+    <string name="item_unit_price_line">Egységár: %1$s</string>
+    <string name="item_quantity_decrease">Mennyiség csökkentése</string>
+    <string name="item_quantity_increase">Mennyiség növelése</string>
+    <string name="item_open_link">Link megnyitása</string>
+    <string name="item_delete">Tétel törlése</string>
+    <string name="item_delete_title">Törlöd a tételt?</string>
+    <string name="item_delete_text">A(z) „%1$s” véglegesen törlődik. Ez nem vonható vissza.</string>
+    <string name="item_zero_title">A mennyiség 0</string>
+    <string name="item_zero_text">Eladva státuszra állítod a tételt? Az eladott tételek nem számítanak bele a készletértékbe.</string>
+    <string name="item_zero_mark_sold">Eladva</string>
+    <string name="item_zero_keep">Maradjon készleten</string>
+    <plurals name="pieces">
+        <item quantity="one">%d db</item>
+        <item quantity="other">%d db</item>
+    </plurals>
+    <string name="yes">Igen</string>
+    <string name="no">Nem</string>
+    <string name="form_none">Nincs megadva</string>
+    <string name="form_clear">Törlés</string>
+    <string name="form_error_required">Kötelező</string>
+    <string name="form_error_number">Adj meg egy érvényes számot</string>
+    <string name="form_error_link">Adj meg egy érvényes webcímet</string>
+    <string name="form_error_quantity_new">Legalább 1 legyen</string>
+    <string name="form_error_quantity">Adj meg egy egész számot</string>
+
+    <!-- Fotók -->
+    <string name="photos_section">Fotók</string>
+    <string name="photo_add">Fotó hozzáadása</string>
+    <string name="photo_take">Fénykép készítése</string>
+    <string name="photo_pick">Választás a galériából</string>
+    <string name="photo_count">Fotók: %1$d / %2$d • koppints egy fotóra a lehetőségekért</string>
+    <string name="photo_limit_reached">Fotók: %1$d / %1$d – elérted a korlátot</string>
+    <string name="photo_import_failed">Egy fotót nem sikerült hozzáadni. Próbálj egy másikat.</string>
+    <string name="photo_cover">Borító</string>
+    <string name="photo_make_cover">Legyen borítókép</string>
+    <string name="photo_move_left">Mozgatás balra</string>
+    <string name="photo_move_right">Mozgatás jobbra</string>
+    <string name="photo_remove">Eltávolítás</string>
+    <string name="close">Bezárás</string>
+
+    <!-- Keresés és szűrők -->
+    <string name="items_search_hint">Keresés: %1$s</string>
+    <string name="items_no_match_title">Nincs találat</string>
+    <string name="items_no_match_text">Próbálj más keresőszót, vagy módosítsd a szűrőket.</string>
+    <string name="filter_title">Szűrők</string>
+    <string name="filter_all">Összes</string>
+    <string name="filter_any">Mindegy</string>
+    <string name="filter_from">Tól</string>
+    <string name="filter_to">Ig</string>
+    <string name="filter_contains">Tartalmazza</string>
+    <string name="filter_clear">Szűrők törlése</string>
+    <string name="filter_clear_all">Keresés és szűrők törlése</string>
+    <string name="filter_remove">Szűrő eltávolítása</string>
+    <string name="filter_show">Mutasd</string>
+    <string name="filter_show_count">Mutasd (%1$s)</string>
+    <string name="search_start_title">Keresés a leltárban</string>
+    <string name="search_no_results_title">Nincs találat</string>
+    <string name="search_no_results_text">Az aktív kategóriákban nincs egyező tétel. Az archivált kategóriákban nem keres.</string>
+    <plurals name="search_result_count">
+        <item quantity="one">%d találat</item>
+        <item quantity="other">%d találat</item>
+    </plurals>
+
+    <!-- Státusz panel -->
+    <string name="status_sheet_title">Státusz módosítása</string>
+    <string name="status_in_stock_desc">Elérhető, eladható</string>
+    <string name="status_reserved_desc">Valaki jelezte, hogy megveszi</string>
+    <string name="status_sold_desc">Kikerül a készletértékből</string>
+
+    <!-- Mentetlen változások -->
+    <string name="discard_title">Elveted a változásokat?</string>
+    <string name="discard_text">Mentetlen változásaid vannak. Ha most kilépsz, elvesznek.</string>
+    <string name="discard_confirm">Elvetés</string>
+    <string name="discard_keep">Szerkesztés folytatása</string>
+
+    <!-- Keresés -->
+    <string name="search_title">Keresés</string>
+    <string name="search_placeholder">Keresés az összes tétel között…</string>
+    <string name="search_empty_text">Keress név szerint vagy a tételek bármely szöveges mezőjében.</string>
+
+    <!-- Beállítások -->
+    <string name="settings_title">Beállítások</string>
+    <string name="settings_appearance">Megjelenés</string>
+    <string name="settings_theme">Téma</string>
+    <string name="theme_system">Rendszer</string>
+    <string name="theme_light">Világos</string>
+    <string name="theme_dark">Sötét</string>
+    <string name="settings_language">Nyelv</string>
+    <string name="language_system">Rendszer</string>
+    <string name="settings_data">Adatok</string>
+    <string name="settings_archived">Archivált kategóriák</string>
+    <string name="settings_about">Névjegy</string>
+    <string name="settings_version">Verzió: %1$s</string>
+
+    <!-- Archivált kategóriák -->
+    <string name="archived_title">Archivált kategóriák</string>
+    <string name="archived_empty_title">Nincs archivált kategória</string>
+    <string name="archived_empty_text">Az archivált kategóriák rejtve vannak a kezdőlapon, és nem számítanak bele a készletértékbe.</string>
+    <string name="archived_restore">Visszaállítás</string>
+    <string name="archived_delete">Végleges törlés</string>
+</resources>
