@@ -1,12 +1,17 @@
-# Add project specific R8 rules here.
-# AGP will combine all keep rule files in src/main/keepRules to pass to R8
-#
-# For more details, see
-#   https://d.android.com/r/tools/r8/keep-rules
+# R8 szabályok a release buildhez (a cashApp mintájára).
+# AGP will combine all keep rule files in src/main/keepRules to pass to R8.
+# https://d.android.com/r/tools/r8/keep-rules
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# Room: az adatbázis-implementációt reflexióval példányosítja.
+-keep class * extends androidx.room.RoomDatabase { <init>(); }
+
+# Az entitások mezőnevei = oszlopnevek; az adatmentés nyers SQL-lel, oszlopnév szerint dolgozik.
+-keep @androidx.room.Entity class com.example.inventory.data.db.entity.** { *; }
+-keep class com.example.inventory.data.db.Converters { *; }
+
+# Az enumokat a Room és a DataStore név szerint tárolja (valueOf / name).
+-keepclassmembers enum com.example.inventory.** {
+    <fields>;
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}

@@ -28,9 +28,11 @@ android {
 
     buildTypes {
         release {
+            // R8: kódzsugorítás, obfuszkálás és erőforrás-zsugorítás (keepRules/rules.keep), mint a cashAppban.
             optimization {
-                enable = false
+                enable = true
             }
+            isShrinkResources = true
         }
     }
     buildFeatures {
