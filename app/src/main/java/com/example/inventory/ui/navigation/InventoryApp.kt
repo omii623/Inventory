@@ -28,6 +28,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.inventory.R
+import com.example.inventory.ui.backup.BackupScreen
 import com.example.inventory.ui.categoryedit.CategoryEditScreen
 import com.example.inventory.ui.home.HomeScreen
 import com.example.inventory.ui.itemdetail.ItemDetailScreen
@@ -103,7 +104,13 @@ fun InventoryApp() {
                 )
             }
             composable(Routes.SEARCH) { SearchScreen(onOpenItem = { id -> navController.navigate(Routes.itemDetail(id)) }) }
-            composable(Routes.SETTINGS) { SettingsScreen(onOpenArchived = { navController.navigate(Routes.ARCHIVED) }) }
+            composable(Routes.SETTINGS) {
+                SettingsScreen(
+                    onOpenArchived = { navController.navigate(Routes.ARCHIVED) },
+                    onOpenBackup = { navController.navigate(Routes.BACKUP) },
+                )
+            }
+            composable(Routes.BACKUP) { BackupScreen(onBack = { navController.popBackStack() }) }
             composable(
                 Routes.CATEGORY_EDIT,
                 arguments = listOf(navArgument(Routes.ARG_CATEGORY_ID) { type = NavType.LongType }),

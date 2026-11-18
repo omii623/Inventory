@@ -1,6 +1,7 @@
 package com.example.inventory.di
 
 import android.content.Context
+import com.example.inventory.data.backup.BackupManager
 import com.example.inventory.data.db.InventoryDatabase
 import com.example.inventory.data.photo.PhotoStorage
 import com.example.inventory.data.repository.CategoryRepository
@@ -19,4 +20,5 @@ class AppContainer(context: Context) {
     val categoryRepository: CategoryRepository by lazy { CategoryRepository(database, photoStorage) }
     val itemRepository: ItemRepository by lazy { ItemRepository(database, photoStorage) }
     val filterStore: FilterStore by lazy { FilterStore() }
+    val backupManager: BackupManager by lazy { BackupManager(appContext, database, photoStorage, settingsRepository, filterStore) }
 }

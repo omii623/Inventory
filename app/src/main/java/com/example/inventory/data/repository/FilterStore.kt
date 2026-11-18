@@ -15,4 +15,7 @@ class FilterStore {
     fun set(categoryId: Long, filter: ItemFilter) {
         filters[categoryId] = filter
     }
+
+    /** Visszaállítás után: a régi kategória-azonosítókhoz tartozó szűrők érvénytelenek. */
+    fun clear() = filters.clear()
 }

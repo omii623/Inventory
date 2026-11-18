@@ -28,4 +28,5 @@ object Routes {
     fun itemEdit(itemId: Long, categoryId: Long) = "itemedit?$ARG_CATEGORY_ID=$categoryId&$ARG_ITEM_ID=$itemId"
 
     const val ARCHIVED = "settings/archived"
+    const val BACKUP = "settings/backup"
 }

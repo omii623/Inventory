@@ -73,6 +73,8 @@ dependencies {
     implementation(libs.androidx.exifinterface)
 
     testImplementation(libs.junit)
+    // Valódi org.json a unit tesztekhez (az android.jar-ban csak üres csonk van) – a mentés kódolójához.
+    testImplementation(libs.org.json)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }

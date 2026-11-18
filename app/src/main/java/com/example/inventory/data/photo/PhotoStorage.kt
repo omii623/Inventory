@@ -20,11 +20,15 @@ import kotlinx.coroutines.withContext
  *   az EXIF-forgatást alkalmazva – így az eredeti törlése után is megmarad, és nem foglal feleslegesen helyet.
  * - A kamera ideiglenes fájlja a cache/camera/ mappába kerül (FileProvider-en át kapja meg a kamera app).
  */
-class PhotoStorage(context: Context) {
+class PhotoStorage(
+    context: Context,
+    /** A fotók mappája; alapból files/photos/. A tesztek saját ideiglenes mappát adnak meg. */
+    directory: File? = null,
+) {
 
     private val appContext = context.applicationContext
 
-    val directory: File = File(appContext.filesDir, DIR).apply { mkdirs() }
+    val directory: File = (directory ?: File(appContext.filesDir, DIR)).apply { mkdirs() }
     private val cameraDir: File = File(appContext.cacheDir, CAMERA_DIR).apply { mkdirs() }
 
     fun file(fileName: String): File = File(directory, fileName)

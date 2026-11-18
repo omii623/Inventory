@@ -12,6 +12,9 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.outlined.Archive
+import androidx.compose.material.icons.outlined.Backup
+import androidx.compose.foundation.clickable
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.ui.Alignment
 import androidx.compose.foundation.rememberScrollState
@@ -38,13 +41,11 @@ import com.example.inventory.data.settings.AppLanguage
 import com.example.inventory.domain.model.ThemeMode
 import com.example.inventory.ui.AppViewModelProvider
 
-/**
- * Beállítások. M0: téma és nyelv (hogy a két téma és a két nyelv rögtön kipróbálható legyen) + verzió.
- * Az archivált kategóriák és az adatmentés a későbbi mérföldkövekben kerül ide.
- */
+/** Beállítások: téma, nyelv, archivált kategóriák, adatmentés, névjegy (verzió). */
 @Composable
 fun SettingsScreen(
     onOpenArchived: () -> Unit,
+    onOpenBackup: () -> Unit,
     viewModel: SettingsViewModel = viewModel(factory = AppViewModelProvider.Factory),
 ) {
     val themeMode by viewModel.themeMode.collectAsStateWithLifecycle()
@@ -92,17 +93,13 @@ fun SettingsScreen(
 
         SectionTitle(stringResource(R.string.settings_data))
         Card(
-            onClick = onOpenArchived,
             shape = RoundedCornerShape(16.dp),
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainer),
             modifier = Modifier.fillMaxWidth(),
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(16.dp)) {
-                Icon(Icons.Outlined.Archive, contentDescription = null, tint = MaterialTheme.colorScheme.onSurfaceVariant)
-                Spacer(Modifier.size(16.dp))
-                Text(stringResource(R.string.settings_archived), style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
-                Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = null, tint = MaterialTheme.colorScheme.onSurfaceVariant)
-            }
+            NavRow(Icons.Outlined.Archive, stringResource(R.string.settings_archived), onOpenArchived)
+            HorizontalDivider(Modifier.padding(horizontal = 16.dp))
+            NavRow(Icons.Outlined.Backup, stringResource(R.string.settings_backup), onOpenBackup)
         }
 
         SectionTitle(stringResource(R.string.settings_about))
@@ -114,6 +111,19 @@ fun SettingsScreen(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
+    }
+}
+
+@Composable
+private fun NavRow(icon: androidx.compose.ui.graphics.vector.ImageVector, text: String, onClick: () -> Unit) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.fillMaxWidth().clickable(onClick = onClick).padding(16.dp),
+    ) {
+        Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.onSurfaceVariant)
+        Spacer(Modifier.size(16.dp))
+        Text(text, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
+        Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = null, tint = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
 

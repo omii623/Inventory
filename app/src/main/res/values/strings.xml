@@ -218,6 +218,40 @@
     <string name="discard_confirm">Discard</string>
     <string name="discard_keep">Keep editing</string>
 
+    <!-- Adatmentés -->
+    <string name="settings_backup">Backup and export</string>
+    <string name="bk_title">Backup and export</string>
+    <string name="bk_save_title">Full backup</string>
+    <string name="bk_save_text">Everything in one zip file: categories, fields, items, photos and settings. You can restore it later, even on another phone.</string>
+    <string name="bk_save_button">Save backup…</string>
+    <string name="bk_restore_title">Restore from backup</string>
+    <string name="bk_restore_text">Load an earlier backup. It replaces all current data and photos – make a fresh backup first.</string>
+    <string name="bk_restore_button">Choose backup…</string>
+    <string name="bk_csv_title">Spreadsheet export (CSV)</string>
+    <string name="bk_csv_text">One CSV per category (with its own fields as columns) in a zip file, for Excel or Google Sheets. Export only – restore works from the full backup.</string>
+    <string name="bk_csv_button">Export CSV…</string>
+    <string name="bk_csv_value">Value (Ft)</string>
+    <string name="bk_csv_unit_value">Unit value (Ft)</string>
+    <string name="bk_csv_created">Added</string>
+    <string name="bk_working">Working…</string>
+    <string name="bk_confirm_title">Restore backup?</string>
+    <string name="bk_confirm_text">Backup time: %1$s\nCategories: %2$d, items: %3$d, photos: %4$d.\n\nAll current data and photos will be deleted and replaced with the backup. This can’t be undone.</string>
+    <string name="bk_confirm_button">Restore</string>
+    <string name="bk_error_title">Couldn’t load the backup</string>
+    <string name="bk_error_text">Reason: %1$s.\n\nYour current data wasn’t changed.</string>
+    <string name="bk_msg_saved">Backup saved</string>
+    <string name="bk_msg_csv_saved">CSV export saved</string>
+    <string name="bk_msg_restored">Data restored</string>
+    <string name="bk_msg_write_failed">The file couldn’t be written</string>
+    <string name="bk_err_not_zip">the file isn’t a zip file</string>
+    <string name="bk_err_not_inventory">this isn’t an Inventory backup</string>
+    <string name="bk_err_unknown_format">unknown backup format</string>
+    <string name="bk_err_newer_version">the backup was made with a newer version of the app – update the app first</string>
+    <string name="bk_err_corrupt">the backup is damaged</string>
+    <string name="bk_err_unreadable">the file can’t be read</string>
+    <string name="bk_err_broken_reference">the backup is damaged (broken reference)</string>
+    <string name="bk_err_unknown">unknown error</string>
+
     <!-- Keresés -->
     <string name="search_title">Search</string>
     <string name="search_placeholder">Search all items…</string>

@@ -216,6 +216,40 @@
     <string name="discard_confirm">Elvetés</string>
     <string name="discard_keep">Szerkesztés folytatása</string>
 
+    <!-- Adatmentés -->
+    <string name="settings_backup">Adatmentés és export</string>
+    <string name="bk_title">Adatmentés és export</string>
+    <string name="bk_save_title">Teljes mentés</string>
+    <string name="bk_save_text">Minden egy zip fájlban: kategóriák, mezők, tételek, fotók és beállítások. Később visszaállítható, akár másik telefonon is.</string>
+    <string name="bk_save_button">Mentés fájlba…</string>
+    <string name="bk_restore_title">Visszaállítás mentésből</string>
+    <string name="bk_restore_text">Egy korábbi mentés betöltése. A jelenlegi adatok és fotók helyére kerül – előtte készíts friss mentést.</string>
+    <string name="bk_restore_button">Mentés kiválasztása…</string>
+    <string name="bk_csv_title">Táblázat export (CSV)</string>
+    <string name="bk_csv_text">Kategóriánként egy CSV (a saját mezőkkel oszlopként) egy zip fájlban, Excelhez vagy Google Táblázatokhoz. Csak export – visszaállítani a teljes mentésből lehet.</string>
+    <string name="bk_csv_button">CSV exportálása…</string>
+    <string name="bk_csv_value">Érték (Ft)</string>
+    <string name="bk_csv_unit_value">Egységár (Ft)</string>
+    <string name="bk_csv_created">Felvéve</string>
+    <string name="bk_working">Folyamatban…</string>
+    <string name="bk_confirm_title">Visszaállítod a mentést?</string>
+    <string name="bk_confirm_text">Mentés ideje: %1$s\nKategóriák: %2$d, tételek: %3$d, fotók: %4$d.\n\nA jelenlegi adatok és fotók törlődnek, és a mentés kerül a helyükre. Ez nem vonható vissza.</string>
+    <string name="bk_confirm_button">Visszaállítás</string>
+    <string name="bk_error_title">Nem sikerült betölteni a mentést</string>
+    <string name="bk_error_text">Ok: %1$s.\n\nA jelenlegi adatok nem változtak.</string>
+    <string name="bk_msg_saved">Mentés elkészült</string>
+    <string name="bk_msg_csv_saved">CSV export elkészült</string>
+    <string name="bk_msg_restored">Adatok visszaállítva</string>
+    <string name="bk_msg_write_failed">A fájlt nem sikerült írni</string>
+    <string name="bk_err_not_zip">a fájl nem zip fájl</string>
+    <string name="bk_err_not_inventory">ez nem Inventory-mentés</string>
+    <string name="bk_err_unknown_format">ismeretlen mentésformátum</string>
+    <string name="bk_err_newer_version">a mentés az app egy újabb verziójával készült – előbb frissítsd az appot</string>
+    <string name="bk_err_corrupt">a mentés sérült</string>
+    <string name="bk_err_unreadable">a fájl nem olvasható</string>
+    <string name="bk_err_broken_reference">a mentés sérült (hibás hivatkozás)</string>
+    <string name="bk_err_unknown">ismeretlen hiba</string>
+
     <!-- Keresés -->
     <string name="search_title">Keresés</string>
     <string name="search_placeholder">Keresés az összes tétel között…</string>

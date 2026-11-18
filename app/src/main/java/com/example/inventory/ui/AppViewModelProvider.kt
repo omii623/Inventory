@@ -7,6 +7,7 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.inventory.InventoryApplication
 import com.example.inventory.di.AppContainer
+import com.example.inventory.ui.backup.BackupViewModel
 import com.example.inventory.ui.categoryedit.CategoryEditViewModel
 import com.example.inventory.ui.home.HomeViewModel
 import com.example.inventory.ui.itemdetail.ItemDetailViewModel
@@ -27,6 +28,7 @@ object AppViewModelProvider {
             ItemListViewModel(createSavedStateHandle(), container().categoryRepository, container().itemRepository, container().filterStore)
         }
         initializer { SearchViewModel(createSavedStateHandle(), container().itemRepository) }
+        initializer { BackupViewModel(container().backupManager, (this[APPLICATION_KEY] as InventoryApplication).contentResolver) }
         initializer {
             ItemEditViewModel(createSavedStateHandle(), container().categoryRepository, container().itemRepository, container().photoStorage)
         }
